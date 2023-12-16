@@ -1,0 +1,11 @@
+use sakila;
+select distinct rating from film;
+select distinct release_year from film;
+select * from film where title like '%ARMAGEDDON%';
+select * from film where title like '%APOLLO%';
+select * from film where title like '%APOLLO';
+select * from film where title like '%DATE%';
+select title, length(title) as title_length from film order by title_length desc limit 10;
+select title, length from film order by length desc limit 10;
+select count(*) as num_behind_the_scenes from film where special_features like '%Behind the scenes%';
+select * from film order by release_year, title;
